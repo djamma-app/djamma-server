@@ -1,0 +1,47 @@
+{
+  "name": "djamma-server",
+  "version": "1.0.0",
+  "description": "A server for Djamma",
+  "main": "src/index.js",
+  "repository": "git@github.com:djamma-app/djamma-server",
+  "author": "djamma",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "dev": "babel-watch src/",
+    "prebuild": "rimraf build/",
+    "build": "babel src -d ./build --ignore '**/*.test.js'",
+    "postbuild": "./postbuild.js",
+    "start": "node build/",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint '**/*.js'",
+    "pretty": "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\"",
+    "pretty:check": "prettier-eslint --single-quote --trailing-comma es5 --list-different --log-level silent \"**/*.js\" \"**/*.json\""
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-watch": "^2.0.7",
+    "eslint": "^4.12.0",
+    "eslint-plugin-jest": "^21.3.2",
+    "eslint-plugin-react": "^7.5.1",
+    "glob": "^7.1.2",
+    "jest": "^21.2.1",
+    "prettier": "^1.8.2",
+    "prettier-eslint": "^8.2.2",
+    "prettier-eslint-cli": "^4.4.0",
+    "rimraf": "^2.6.2",
+    "shelljs": "^0.7.8"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "winston": "^3.0.0-rc1"
+  },
+  "moduleRoots": [
+    "src"
+  ]
+}
