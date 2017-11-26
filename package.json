@@ -16,8 +16,10 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint '**/*.js'",
-    "pretty": "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\"",
-    "pretty:check": "prettier-eslint --single-quote --trailing-comma es5 --list-different --log-level silent \"**/*.js\" \"**/*.json\""
+    "pretty":
+      "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\"",
+    "pretty:check":
+      "prettier-eslint --single-quote --trailing-comma es5 --list-different --log-level silent \"**/*.js\" \"**/*.json\""
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -41,7 +43,5 @@
     "express": "^4.16.2",
     "winston": "^3.0.0-rc1"
   },
-  "moduleRoots": [
-    "src"
-  ]
+  "moduleRoots": ["src"]
 }
